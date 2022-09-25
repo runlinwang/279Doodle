@@ -50,7 +50,63 @@
     <body>
         <div id="stage">
             <div id="preview">
-                <div id="poll"><div class="card-panel"><h2 class="question">Which fruit do <em>you</em> like?</h2><form id="pollForm" method="POST"><input type="hidden" name="csrfmiddlewaretoken" value="undefined"><table id="pollTable"><tbody><tr><td></td><td class="optionLabel">Apple</td><td class="optionLabel">Banana</td><td class="optionLabel">Orange</td><td class="optionLabel">Papaya</td><td></td></tr><tr><td class="person">Dmitri</td><td class="vote votedNo"><span>✘</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr><td class="person">Jule</td><td class="vote votedYes"><span>✔</span></td><td class="vote votedYes"><span>✔</span></td><td class="vote votedYes"><span>✔</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr><td class="person">Vered</td><td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr><td class="person">Matthieu</td><td class="vote votedYes"><span>✔</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr><td class="person"><input id="voterName" name="voterName" type="text" class="person" placeholder="Your name"></td><td id="optionTd0" class="vote yetToVote"><label><input type="checkbox" id="option0" name="option0" class="filled-in" onclick="onClickCheckBox(this);"><span></span></label></td><td id="optionTd1" class="vote yetToVote"><label><input type="checkbox" id="option1" name="option1" class="filled-in" onclick="onClickCheckBox(this);"><span></span></label></td><td id="optionTd2" class="vote yetToVote"><label><input type="checkbox" id="option2" name="option2" class="filled-in" onclick="onClickCheckBox(this);"><span></span></label></td><td id="optionTd3" class="vote yetToVote"><label><input type="checkbox" id="option3" name="option3" class="filled-in" onclick="onClickCheckBox(this);"><span></span></label></td><td><input id="submitVote" type="submit" disabled="disabled" class="waves-effect waves-light btn" value="Save"></td></tr><tr><td></td><td class="vote sumNonZero" id="sum0">2</td><td class="vote sumNonZero" id="sum1">2</td><td class="vote sumNonZero" id="sum2">1</td><td class="vote sumNonZero" id="sum3">4</td><td></td></tr></tbody></table></form></div></div>
+                <div id="poll">
+                    <div class="card-panel">
+                        <h2 class="question">Which fruit do <em>you</em> like?</h2>
+                        <form id="pollForm" method="POST">
+                            <input type="hidden" name="csrfmiddlewaretoken" value="undefined">
+                            <table id="pollTable">
+                                <tbody><tr><td></td>
+                                    <td class="optionLabel">Apple</td>
+                                    <td class="optionLabel">Banana</td>
+                                    <td class="optionLabel">Orange</td>
+                                    <td class="optionLabel">Papaya</td>
+                                    <td></td></tr><tr>
+                                    <td class="person">Dmitri</td>
+                                        <td class="vote votedNo"><span>✘</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr>
+                                    <td class="person">Jule</td>
+                                        <td class="vote votedYes"><span>✔</span></td><td class="vote votedYes"><span>✔</span></td><td class="vote votedYes"><span>✔</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr>
+                                    <td class="person">Vered</td>
+                                        <td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr>
+                                    <td class="person">Matthieu</td>
+                                        <td class="vote votedYes"><span>✔</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedNo"><span>✘</span></td><td class="vote votedYes"><span>✔</span></td><td></td></tr><tr>
+                                    <td class="person">
+                                        <input id="voterName" name="voterName" type="text" class="person" placeholder="Your name"></td>
+                                        <td id="optionTd0" class="vote yetToVote">
+                                            <label>
+                                                <input type="checkbox" id="option0" name="option0" class="filled-in" onclick="onClickCheckBox(this);">
+                                                <span></span>
+                                            </label>
+                                        </td>
+                                        <td id="optionTd1" class="vote yetToVote">
+                                            <label>
+                                                <input type="checkbox" id="option1" name="option1" class="filled-in" onclick="onClickCheckBox(this);">
+                                                <span></span>
+                                            </label>
+                                        </td>
+                                        <td id="optionTd2" class="vote yetToVote">
+                                            <label>
+                                                <input type="checkbox" id="option2" name="option2" class="filled-in" onclick="onClickCheckBox(this);">
+                                                <span></span>
+                                            </label>
+                                        </td>
+                                        <td id="optionTd3" class="vote yetToVote">
+                                            <label>
+                                                <input type="checkbox" id="option3" name="option3" class="filled-in" onclick="onClickCheckBox(this);">
+                                                <span></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <input id="submitVote" type="submit" disabled="disabled" class="waves-effect waves-light btn" value="Save">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td class="vote sumNonZero" id="sum0">2</td>
+                                        <td class="vote sumNonZero" id="sum1">2</td>
+                                        <td class="vote sumNonZero" id="sum2">1</td>
+                                        <td class="vote sumNonZero" id="sum3">4</td>
+                                        <td></td></tr></tbody></table></form></div></div>
             </div>
             <div id="setup">
                 <div class="card-panel">
