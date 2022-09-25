@@ -164,7 +164,7 @@ td.person {
     margin: 0px;
 }
 #pollTable tr td {
-    padding: 0px 0px;
+    padding: 10px 10px;
     margin: 0px;
 }
 #pollTable tr td label span {
@@ -180,6 +180,9 @@ td.person {
 }
 .votedNo {
     background-color: #fdd;
+}
+.votedNeedBe {
+    background-color: #fed;
 }
 .yetToVote {
     background-color: #dfdfdf;
